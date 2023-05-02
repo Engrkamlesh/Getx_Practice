@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 class Switch_Screen extends StatefulWidget {
   const Switch_Screen({super.key});
-
   @override
   State<Switch_Screen> createState() => _Switch_ScreenState();
 }
@@ -13,7 +12,6 @@ class Switch_Screen extends StatefulWidget {
 class _Switch_ScreenState extends State<Switch_Screen> {
 
 CountgetProvider controller = Get.put(CountgetProvider());
-
 
   // bool notify = false;
   @override
@@ -36,7 +34,8 @@ CountgetProvider controller = Get.put(CountgetProvider());
               
               },
             title: Text(controller.FruitList[index].toString()),
-            trailing:Obx(() => Icon(Icons.favorite, color:controller.TempFruit.contains(controller.FruitList.value.obs[index].toString())?Colors.red:Colors.white,))
+            trailing:Obx(() => Icon(Icons.favorite, 
+            color:controller.TempFruit.contains(controller.FruitList.value.obs[index].toString())?Colors.red:Colors.white,))
                   ),
           );
         })
