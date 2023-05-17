@@ -9,8 +9,12 @@ import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
-import 'api/ApiData.dart';
-import 'api/login_api_screen.dart';
+
+import 'list_Screen.dart';
+import 'new_Screen.dart';
+import 'otp/home.dart';
+import 'otp/otp_screeen.dart';
+import 'otp/send_otp.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +39,7 @@ class MyApp extends StatelessWidget {
                       ResponsiveBreakpoint.resize(1200, name: DESKTOP),
                       ResponsiveBreakpoint.resize(2460 , name: '4k')
         ]),
-      home: PayPal_Screen(),
+      home: New_Screen(),
       // getPages: [
       //   GetPage(name: '/', page: ()=>Simple_screen()),
       //   GetPage(name: '/second', page: ()=>Second_Screen())
