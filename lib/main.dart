@@ -15,6 +15,7 @@ import 'new_Screen.dart';
 import 'otp/home.dart';
 import 'otp/otp_screeen.dart';
 import 'otp/send_otp.dart';
+import 'radioList.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
                       ResponsiveBreakpoint.resize(1200, name: DESKTOP),
                       ResponsiveBreakpoint.resize(2460 , name: '4k')
         ]),
-      home: New_Screen(),
+      home: RadioList(),
       // getPages: [
       //   GetPage(name: '/', page: ()=>Simple_screen()),
       //   GetPage(name: '/second', page: ()=>Second_Screen())

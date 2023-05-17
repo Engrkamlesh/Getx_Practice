@@ -4,6 +4,15 @@ import 'package:image_picker/image_picker.dart';
 
 class CountgetProvider extends GetxController{
 
+  var selectedValue = 0.obs;
+
+  void updateSelectedValue(int value) {
+    selectedValue.value = value;
+  }
+
+
+
+
 //Image Picker 
 RxString imagePath = ''.obs;
 
