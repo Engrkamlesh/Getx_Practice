@@ -11,10 +11,24 @@ class CountgetProvider extends GetxController{
   }
 
 
+  RxString imagePath = ''.obs;
+  RxString defaultImagePath = 'image/img.jpg'.obs;
+
+  void pickImage() async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedFile != null) {
+      imagePath.value = pickedFile.path.toString();
+    } 
+    else {
+      imagePath.value;
+    }
+  }
 
 
 //Image Picker 
-RxString imagePath = ''.obs;
+// RxString imagePath = ''.obs;
 
 Future getImage()async{
   final ImagePicker _picker = ImagePicker();

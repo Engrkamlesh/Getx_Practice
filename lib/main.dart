@@ -10,6 +10,8 @@ import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
+import 'controller/pick_image.dart';
+import 'image_picker.dart';
 import 'list_Screen.dart';
 import 'new_Screen.dart';
 import 'otp/home.dart';
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
                       ResponsiveBreakpoint.resize(1200, name: DESKTOP),
                       ResponsiveBreakpoint.resize(2460 , name: '4k')
         ]),
-      home: RadioList(),
+      home: Pick_Images(),
       // getPages: [
       //   GetPage(name: '/', page: ()=>Simple_screen()),
       //   GetPage(name: '/second', page: ()=>Second_Screen())
