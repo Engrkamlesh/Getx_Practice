@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,18 +22,18 @@ class Pick_Images extends StatelessWidget {
           itemBuilder: (context, index) {
             final imageItem = imagePickerController.images[index];
             return ListTile(
-              leading: AssetThumb(
-                asset: imageItem.path,
-                width: 100,
-                height: 100,
-              ),
+              leading:Image.file(File(imageItem)),
               title: Text('Image $index'),
             );
           },
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: imagePickerController.pickImages,
+        onPressed: (){
+          imagePickerController.pickImages();
+         
+        print('Succesfully');
+        },
         child: Icon(Icons.add),
       ),
     );
